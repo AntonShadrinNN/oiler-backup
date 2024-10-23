@@ -1,0 +1,5 @@
+## Append samples of your project ##
+resources:
+- base_v1alpha1_backuprequest.yaml
+- base_v1alpha1_restorerequest.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

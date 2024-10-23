@@ -1,0 +1,23 @@
+# permissions for end users to view restorerequests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: oiler
+    app.kubernetes.io/managed-by: kustomize
+  name: restorerequest-viewer-role
+rules:
+- apiGroups:
+  - base.oiler.backup
+  resources:
+  - restorerequests
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - base.oiler.backup
+  resources:
+  - restorerequests/status
+  verbs:
+  - get
